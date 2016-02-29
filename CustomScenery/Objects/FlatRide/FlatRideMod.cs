@@ -42,9 +42,16 @@ public class FlatRideMod : ModdedObject
                 RAE.Check(FR);
 
         //Basic FlatRide Settings
+        Debug.Log("==[Basic Settings]==");
+        Debug.Log(AssetManager.Instance.rideFenceGO);
         FR.fenceGO = AssetManager.Instance.rideFenceGO;
-        FR.entranceGO = AssetManager.Instance.rideEntranceGO;
-        FR.exitGO = AssetManager.Instance.rideExitGO;
+        Debug.Log(AssetManager.Instance.attractionEntranceGO);
+        FR.entranceGO = AssetManager.Instance.attractionEntranceGO;
+        Debug.Log(AssetManager.Instance.attractionExitGO);
+        FR.exitGO = AssetManager.Instance.attractionExitGO;
+        FR.categoryTag = "Attractions/Flat Ride";
+        FR.defaultEntranceFee = 1f;
+        Debug.Log( AssetManager.Instance.flatRideEntranceExitBuilderGO);
         FR.entranceExitBuilderGO = AssetManager.Instance.flatRideEntranceExitBuilderGO;
         base.Decorate();
     }

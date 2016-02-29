@@ -17,7 +17,6 @@ public class Registar
             {
                 asset = new GameObject();
             }
-            asset.SetActive(false);
             ModdedObject.Decorate();
             Object.DontDestroyOnLoad(asset);
 
